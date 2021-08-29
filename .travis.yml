@@ -8,7 +8,7 @@ script:
 
 
 before_deploy:
-  - docker login -u USER_LOGIN -p USER_PASSWORD
+  - docker login -u $USER_LOGIN -p $USER_PASSWORD
 
 deploy:
   provider: script
