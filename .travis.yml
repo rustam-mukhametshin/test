@@ -5,3 +5,13 @@ services:
 script:
   - docker build -t rustamphp/node .
   - docker images rustamphp/node
+
+
+before_deploy:
+  - docker login -u USER_LOGIN -p USER_PASSWORD
+
+deploy:
+  provider: script
+  script: docker push rustamphp/node
+  on:
+    branch: main
