@@ -1,0 +1,7 @@
+sude: required
+services:
+  - docker
+
+script:
+  - docker build -t rustamphp/node .
+  - docker images rustamphp/node
